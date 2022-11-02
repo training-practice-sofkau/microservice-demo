@@ -1,0 +1,20 @@
+server:
+  port: 8082
+  origin: ${ORIGIN:*}
+  servlet:
+    context-path: /proxy
+spring:
+  main:
+    banner-mode: off
+  output:
+    ansi:
+      enabled: ALWAYS
+  application:
+    name: proxy
+  rabbitmq:
+    addresses: ${RABBITMQ_URI:amqp://guest:guest@localhost:5672}
+microservice:
+  exchange: "core-demo"
+  queue: "demo.proxyhandles"
+  routingKey: "org.example.#"
+

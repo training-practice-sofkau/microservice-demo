@@ -1,0 +1,8 @@
+/.idea/
+/applications/app-command/target/
+/applications/app-queries/target/
+/applications/app-proxy/target/
+/domain/target/
+/business/target/
+/generic/target/
+/msdemo.iml
