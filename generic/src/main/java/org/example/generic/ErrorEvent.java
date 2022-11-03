@@ -6,7 +6,7 @@ public class ErrorEvent extends DomainEvent {
     private final String message;
 
     public ErrorEvent(String classType, String message){
-        super("cargame.error");
+        super("org.error");
         this.classType = classType;
         this.message = message;
     }

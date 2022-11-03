@@ -17,8 +17,8 @@ spring:
     mongodb:
         uri: ${MONGO_URI:mongodb://localhost:27017/account}
 microservice:
-  exchange: "core-demo"
-  queue: "demo.commandhandles"
-  storeName: "demo"
-  routingKey: "org.example.#"
+  exchange: ${EXCHANGE:core-demo}
+  queue: ${QUEUE:demo.commandhandles}
+  storeName: ${STORE_NAME:demo}
+  routingKey: ${ROUTING_KEY:org.example.#}
 

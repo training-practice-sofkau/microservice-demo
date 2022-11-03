@@ -39,7 +39,8 @@ public class RabbitMQEventConsumer implements CommandLineRunner {
     public void run(String... args) {
         receiver.consumeManualAck(configProperties.getQueue(), new ConsumeOptions()
                 .exceptionHandler(new ExceptionHandlers.RetryAcknowledgmentExceptionHandler(
-                        Duration.ofSeconds(20), Duration.ofMillis(500),
+                        Duration.ofSeconds(20),
+                        Duration.ofMillis(500),
                         ExceptionHandlers.CONNECTION_RECOVERY_PREDICATE
                 )))
                 .flatMap(message -> {
