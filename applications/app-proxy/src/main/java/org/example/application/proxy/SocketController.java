@@ -1,6 +1,6 @@
 package org.example.application.proxy;
 
-import org.example.generic.DomainEvent;
+import org.example.generic.domain.DomainEvent;
 import org.example.generic.GsonEventSerializer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

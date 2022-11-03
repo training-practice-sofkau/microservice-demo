@@ -1,6 +1,6 @@
 package org.example.business;
 
-import org.example.business.gateway.AccountRepository;
+import com.google.gson.Gson;
 import org.example.domain.command.AddTransactionUseCommand;
 import org.example.domain.events.AccountCreated;
 import org.example.domain.events.TransactionAdded;
@@ -8,7 +8,8 @@ import org.example.domain.value.AccountId;
 import org.example.domain.value.Name;
 import org.example.domain.value.TransactionId;
 import org.example.domain.value.UserId;
-import org.example.generic.DomainEvent;
+import org.example.generic.business.EventStoreRepository;
+import org.example.generic.domain.DomainEvent;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -30,14 +31,13 @@ class AddTransactionUseCaseTest {
      AddTransactionUseCase useCase;
 
     @Mock
-    AccountRepository repository;
+    EventStoreRepository repository;
 
     @Test
     void addTransaction(){
         var id = AccountId.of("xxxx");
         var command = new AddTransactionUseCommand(id, new Date());
-
-        when(repository.findEventBy(any())).thenReturn(storedEvent());
+        when(repository.getEventsBy(any(), any())).thenReturn(storedEvent());
         StepVerifier.create(useCase.apply(Mono.just(command)))
                 .expectNextMatches((domainEvent -> {
                     var event = (TransactionAdded)domainEvent;

@@ -1,7 +1,7 @@
 package org.example.domain.events;
 
 import org.example.domain.value.TransactionId;
-import org.example.generic.DomainEvent;
+import org.example.generic.domain.DomainEvent;
 
 import java.util.Date;
 

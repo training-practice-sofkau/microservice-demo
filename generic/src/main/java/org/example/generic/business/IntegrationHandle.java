@@ -1,10 +1,10 @@
-package org.example.generic;
+package org.example.generic.business;
 
 
+import org.example.generic.domain.DomainEvent;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-import java.util.Objects;
 import java.util.function.Function;
 
 public class IntegrationHandle implements Function<Flux<DomainEvent>, Mono<Void>> {

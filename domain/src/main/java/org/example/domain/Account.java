@@ -6,8 +6,8 @@ import org.example.domain.value.AccountId;
 import org.example.domain.value.Name;
 import org.example.domain.value.TransactionId;
 import org.example.domain.value.UserId;
-import org.example.generic.AggregateRoot;
-import org.example.generic.DomainEvent;
+import org.example.generic.domain.AggregateRoot;
+import org.example.generic.domain.DomainEvent;
 
 import java.util.*;
 

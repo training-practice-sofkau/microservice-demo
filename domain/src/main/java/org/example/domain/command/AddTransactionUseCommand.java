@@ -1,7 +1,7 @@
 package org.example.domain.command;
 
 import org.example.domain.value.AccountId;
-import org.example.generic.Command;
+import org.example.generic.domain.Command;
 
 import java.util.Date;
 

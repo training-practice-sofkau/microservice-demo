@@ -1,5 +1,6 @@
-package org.example.generic;
+package org.example.generic.business;
 
+import org.example.generic.domain.DomainEvent;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 

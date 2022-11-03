@@ -3,7 +3,7 @@ package org.example.application.proxy.bus;
 
 import org.example.application.proxy.ConfigProperties;
 import org.example.application.proxy.SocketController;
-import org.example.generic.EventSerializer;
+import org.example.generic.business.EventSerializer;
 import org.example.generic.Notification;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

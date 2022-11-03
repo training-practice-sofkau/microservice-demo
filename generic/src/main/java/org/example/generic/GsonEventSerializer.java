@@ -1,6 +1,8 @@
 package org.example.generic;
 
 import com.google.gson.Gson;
+import org.example.generic.business.EventSerializer;
+import org.example.generic.domain.DomainEvent;
 
 
 public class GsonEventSerializer extends AbstractSerializer implements EventSerializer {

@@ -1,4 +1,4 @@
-package org.example.generic;
+package org.example.generic.domain;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;

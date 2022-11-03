@@ -3,7 +3,7 @@ package org.example.business;
 import org.example.business.gateway.ValidOwnerOfAccountService;
 import org.example.domain.Account;
 import org.example.domain.command.CreateAccountCommand;
-import org.example.generic.DomainEvent;
+import org.example.generic.domain.DomainEvent;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 

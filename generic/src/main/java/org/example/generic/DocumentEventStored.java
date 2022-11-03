@@ -1,6 +1,8 @@
 package org.example.generic;
 
 
+import org.example.generic.business.StoredEvent;
+
 public class DocumentEventStored {
     private String aggregateRootId;
 

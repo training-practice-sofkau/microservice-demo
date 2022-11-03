@@ -1,7 +1,7 @@
 package org.example.domain;
 
 import org.example.domain.value.TransactionId;
-import org.example.generic.Entity;
+import org.example.generic.domain.Entity;
 
 import java.util.Date;
 

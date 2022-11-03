@@ -3,7 +3,7 @@ package org.example.domain.command;
 import org.example.domain.value.AccountId;
 import org.example.domain.value.Name;
 import org.example.domain.value.UserId;
-import org.example.generic.Command;
+import org.example.generic.domain.Command;
 
 public class CreateAccountCommand extends Command {
 

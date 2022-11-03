@@ -2,7 +2,7 @@ package org.example.domain;
 
 import org.example.domain.events.AccountCreated;
 import org.example.domain.events.TransactionAdded;
-import org.example.generic.EventChange;
+import org.example.generic.domain.EventChange;
 
 import java.util.HashMap;
 
@@ -15,7 +15,9 @@ public class AccountEventChange extends EventChange {
         });
 
         apply((TransactionAdded event) -> {
-            account.transactions.put(event.getId(), new Transaction(event.getId(), event.getDate()));
+            account.transactions.put(event.getId(),
+                    new Transaction(event.getId(), event.getDate())
+            );
         });
     }
 }

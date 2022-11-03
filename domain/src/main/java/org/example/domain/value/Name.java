@@ -1,7 +1,12 @@
 package org.example.domain.value;
 
-import org.example.generic.ValueObject;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParseException;
+import org.example.generic.domain.ValueObject;
 
+import java.lang.reflect.Type;
 import java.util.Objects;
 
 public class Name implements ValueObject<String> {
@@ -22,4 +27,5 @@ public class Name implements ValueObject<String> {
     public String value() {
         return value;
     }
+
 }

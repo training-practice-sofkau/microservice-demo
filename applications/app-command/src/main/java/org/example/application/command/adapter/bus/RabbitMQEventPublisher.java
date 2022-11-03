@@ -3,6 +3,9 @@ package org.example.application.command.adapter.bus;
 
 import org.example.application.command.ConfigProperties;
 import org.example.generic.*;
+import org.example.generic.business.EventPublisher;
+import org.example.generic.business.EventSerializer;
+import org.example.generic.domain.DomainEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;

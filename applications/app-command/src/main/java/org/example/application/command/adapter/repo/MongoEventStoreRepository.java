@@ -1,7 +1,11 @@
 package org.example.application.command.adapter.repo;
 
 
-import org.example.generic.*;
+import org.example.generic.DocumentEventStored;
+import org.example.generic.business.EventSerializer;
+import org.example.generic.business.EventStoreRepository;
+import org.example.generic.business.StoredEvent;
+import org.example.generic.domain.DomainEvent;
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;

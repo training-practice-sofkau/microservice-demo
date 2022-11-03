@@ -15,10 +15,10 @@ spring:
     addresses: ${RABBITMQ_URI:amqp://guest:guest@localhost:5672}  
   data:
     mongodb:
-        uri: ${MONGO_URI:mongodb://localhost:27017/account}
+        uri: ${MONGO_URI:mongodb://localhost:27017/demo}
 microservice:
   exchange: ${EXCHANGE:core-demo}
   queue: ${QUEUE:demo.commandhandles}
-  storeName: ${STORE_NAME:demo}
+  storeName: ${STORE_NAME:account}
   routingKey: ${ROUTING_KEY:org.example.#}
 

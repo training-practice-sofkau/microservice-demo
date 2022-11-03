@@ -1,4 +1,6 @@
-package org.example.generic;
+package org.example.generic.domain;
+
+import com.google.gson.JsonDeserializer;
 
 import java.io.Serializable;
 

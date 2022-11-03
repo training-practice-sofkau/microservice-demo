@@ -1,5 +1,7 @@
-package org.example.generic;
+package org.example.generic.business;
 
+
+import org.example.generic.domain.DomainEvent;
 
 public interface EventPublisher {
 

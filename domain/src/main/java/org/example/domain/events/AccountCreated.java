@@ -2,7 +2,7 @@ package org.example.domain.events;
 
 import org.example.domain.value.Name;
 import org.example.domain.value.UserId;
-import org.example.generic.DomainEvent;
+import org.example.generic.domain.DomainEvent;
 
 public class AccountCreated extends DomainEvent {
     private final UserId userId;

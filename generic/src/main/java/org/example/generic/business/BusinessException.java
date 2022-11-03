@@ -1,4 +1,4 @@
-package org.example.generic;
+package org.example.generic.business;
 
 public class BusinessException extends RuntimeException {
 }

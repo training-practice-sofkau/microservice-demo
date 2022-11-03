@@ -1,6 +1,8 @@
 package org.example.generic;
 
 
+import org.example.generic.domain.DomainEvent;
+
 public class ErrorEvent extends DomainEvent {
     private final String classType;
     private final String message;
