@@ -40,13 +40,7 @@ public class CommandHandle {
                 POST("/account/create").and(accept(MediaType.APPLICATION_JSON)),
 
                 request -> usecase.andThen(integrationHandle)
-                        .apply(request.bodyToMono(Map.class).map(map -> {
-                            return new CreateAccountCommand(
-                                    AccountId.of((String)map.get("id")),
-                                    UserId.of((String)map.get("userId")),
-                                    new Name((String)map.get("name"))
-                            );
-                        }))
+                        .apply(request.bodyToMono(CreateAccountCommand.class))
                         .then(ServerResponse.ok().build())
                         .onErrorResume(errorHandler::badRequest)
 
@@ -61,12 +55,7 @@ public class CommandHandle {
                 POST("/account/addtransaction").and(accept(MediaType.APPLICATION_JSON)),
 
                 request -> usecase.andThen(integrationHandle)
-                        .apply(request.bodyToMono(Map.class).map(map -> {
-                            return new AddTransactionUseCommand(
-                                    AccountId.of((String)map.get("id")),
-                                    new Date()
-                            );
-                        }))
+                        .apply(request.bodyToMono(AddTransactionUseCommand.class))
                         .then(ServerResponse.ok().build())
                         .onErrorResume(errorHandler::badRequest)
 
