@@ -18,10 +18,8 @@ import java.util.function.Function;
 @Component
 public class MaterializeLookUp {
     private final Map<String, Flux<DelegateService>> business = new HashMap<>();
-    private final AccountRepository repository;
 
     public MaterializeLookUp(ApplicationContext context, AccountRepository repository) {
-        this.repository = repository;
         business.put("org.example.AccountCreated", Flux.just( input -> {
             var event = (AccountCreated)input;
             var document = new AccountModeView();
@@ -38,9 +36,9 @@ public class MaterializeLookUp {
                 var transactionModelView = new TransactionModelView();
                 transactionModelView.setDate(event.getDate());
                 transactionModelView.setId(event.getId().value());
-
+                transactionModelView.setName(event.getName().value());
                 var trans =  doc.getTransactionModelViews();
-                trans.add(transactionModelView);
+                trans.put(event.getId().value(), transactionModelView);
                 doc.setTransactionModelViews(trans);
 
                 return repository.save(doc).then();

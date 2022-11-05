@@ -2,23 +2,21 @@ package org.example.application.queries.adapter.repo;
 
 import org.example.domain.events.TransactionAdded;
 
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 public class AccountModeView {
     private String id;
     private String name;
     private String userId;
-    private Set<TransactionModelView> transactionModelViews;
+    private Map<String, TransactionModelView> transactionModelViews;
 
-    public void setTransactionModelViews(Set<TransactionModelView> transactionModelViews) {
+    public void setTransactionModelViews(Map<String, TransactionModelView> transactionModelViews) {
         this.transactionModelViews = transactionModelViews;
     }
 
-    public Set<TransactionModelView> getTransactionModelViews() {
+    public Map<String, TransactionModelView> getTransactionModelViews() {
         if(Objects.isNull(transactionModelViews)){
-            return new HashSet<>();
+            return new HashMap<>();
         }
         return transactionModelViews;
     }
