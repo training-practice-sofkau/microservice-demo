@@ -1,4 +1,4 @@
-package org.example.generic;
+package org.example.generic.infrastructure;
 
 import com.google.gson.Gson;
 import org.example.generic.business.EventSerializer;

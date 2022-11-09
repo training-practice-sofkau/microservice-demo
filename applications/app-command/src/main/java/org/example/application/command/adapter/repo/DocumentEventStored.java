@@ -1,4 +1,4 @@
-package org.example.generic;
+package org.example.application.command.adapter.repo;
 
 
 import org.example.generic.business.StoredEvent;

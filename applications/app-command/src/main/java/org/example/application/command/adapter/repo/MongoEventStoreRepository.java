@@ -1,7 +1,6 @@
 package org.example.application.command.adapter.repo;
 
 
-import org.example.generic.DocumentEventStored;
 import org.example.generic.business.EventSerializer;
 import org.example.generic.business.EventStoreRepository;
 import org.example.generic.business.StoredEvent;

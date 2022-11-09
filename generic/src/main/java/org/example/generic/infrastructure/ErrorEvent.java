@@ -1,4 +1,4 @@
-package org.example.generic;
+package org.example.generic.infrastructure;
 
 
 import org.example.generic.domain.DomainEvent;

@@ -3,7 +3,6 @@ package org.example.generic.business;
 
 
 
-import org.example.generic.DeserializeEventException;
 import org.example.generic.domain.DomainEvent;
 
 import java.util.Date;

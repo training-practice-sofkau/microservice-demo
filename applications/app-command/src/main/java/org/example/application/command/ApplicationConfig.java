@@ -3,11 +3,11 @@ package org.example.application.command;
 
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
-import org.example.generic.*;
 import org.example.generic.business.EventPublisher;
 import org.example.generic.business.EventSerializer;
 import org.example.generic.business.EventStoreRepository;
 import org.example.generic.business.IntegrationHandle;
+import org.example.generic.infrastructure.GsonEventSerializer;
 import org.springframework.amqp.core.AmqpAdmin;
 import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.Queue;
@@ -89,7 +89,7 @@ public class ApplicationConfig {
     }
 
     @Bean
-    public  GsonEventSerializer gsonEventSerializer() {
+    public GsonEventSerializer gsonEventSerializer() {
         return new GsonEventSerializer();
     }
 

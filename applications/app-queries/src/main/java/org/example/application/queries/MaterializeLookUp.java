@@ -5,15 +5,13 @@ import org.example.application.queries.adapter.repo.AccountRepository;
 import org.example.application.queries.adapter.repo.TransactionModelView;
 import org.example.domain.events.AccountCreated;
 import org.example.domain.events.TransactionAdded;
-import org.example.generic.DelegateService;
+import org.example.generic.infrastructure.DelegateService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.function.Function;
 
 @Component
 public class MaterializeLookUp {

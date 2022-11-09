@@ -4,7 +4,7 @@ package org.example.application.queries.adapter.bus;
 import org.example.application.queries.ConfigProperties;
 import org.example.application.queries.MaterializeLookUp;
 import org.example.generic.domain.DomainEvent;
-import org.example.generic.GsonEventSerializer;
+import org.example.generic.infrastructure.GsonEventSerializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;

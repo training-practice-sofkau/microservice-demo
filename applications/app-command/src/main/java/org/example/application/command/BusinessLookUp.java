@@ -2,8 +2,7 @@ package org.example.application.command;
 
 
 import org.example.domain.events.AccountCreated;
-import org.example.generic.DelegateService;
-import org.example.generic.domain.DomainEvent;
+import org.example.generic.infrastructure.DelegateService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;

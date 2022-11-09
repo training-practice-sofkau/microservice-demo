@@ -16,6 +16,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.ServerResponse;
+import reactor.core.publisher.Flux;
 
 import java.util.Date;
 import java.util.Map;
@@ -39,9 +40,10 @@ public class CommandHandle {
         return route(
                 POST("/account/create").and(accept(MediaType.APPLICATION_JSON)),
 
-                request -> usecase.andThen(integrationHandle)
+                request -> usecase
                         .apply(request.bodyToMono(CreateAccountCommand.class))
-                        .then(ServerResponse.ok().build())
+                        .collectList()
+                        .flatMap(list -> ServerResponse.accepted().bodyValue(list))
                         .onErrorResume(errorHandler::badRequest)
 
         );

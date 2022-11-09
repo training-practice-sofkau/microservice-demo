@@ -1,4 +1,4 @@
-package org.example.generic;
+package org.example.generic.infrastructure;
 
 public class ErrorResponse {
     private final String message;

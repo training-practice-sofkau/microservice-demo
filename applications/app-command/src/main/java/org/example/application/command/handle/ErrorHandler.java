@@ -1,7 +1,6 @@
 package org.example.application.command.handle;
 
-import com.fasterxml.jackson.databind.exc.ValueInstantiationException;
-import org.example.generic.ErrorResponse;
+import org.example.generic.infrastructure.ErrorResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.server.ServerResponse;

@@ -3,7 +3,7 @@ package org.example.application.queries;
 
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
-import org.example.generic.GsonEventSerializer;
+import org.example.generic.infrastructure.GsonEventSerializer;
 import org.springframework.amqp.core.AmqpAdmin;
 import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.Queue;

@@ -1,13 +1,11 @@
 package org.example.business;
 
 import com.google.gson.Gson;
-import org.example.business.gateway.ValidOwnerOfAccountService;
 import org.example.domain.command.CreateAccountCommand;
 import org.example.domain.events.AccountCreated;
 import org.example.domain.value.AccountId;
 import org.example.domain.value.Name;
 import org.example.domain.value.UserId;
-import org.example.generic.GsonEventSerializer;
 import org.junit.jupiter.api.Test;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
